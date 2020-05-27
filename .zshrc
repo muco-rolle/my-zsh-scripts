@@ -99,7 +99,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias git status='nocorrect git status'
 alias git config='nocorrect git config'
-alias remove-url='git remote get-url origin'
+alias get-git-remote-url='git remote get-url origin'
 
 alias ep="cd /home/mucort/Documents/programming/web-programming/projects/edgco"
 alias mp="cd /home/mucort/Documents/programming/web-programming/projects/muco"
@@ -111,6 +111,13 @@ alias cpTheme="cp -r kopickers_1 /home/mucort/Documents/programming/web-programm
 
 alias db="psql -h localhost -p 5432 -U mucort"
 alias install-eslint="exec 3<&1;bash <&3 <(curl https://raw.githubusercontent.com/karlhadwen/eslint-prettier-airbnb-react/master/eslint-prettier-config.sh 2> /dev/null)"
+
+alias github-access="eval $(ssh-agent -s) && ssh-add ~/.ssh/id_rsa_github_key"
+alias gitlab-access="eval $(ssh-agent -s) && ssh-add ~/.ssh/id_rsa_gitlab_key"
+alias gc="git commit -m"
+alias ga="git add ."
+alias gs="git status"
+
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
